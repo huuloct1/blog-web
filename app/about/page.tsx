@@ -3,7 +3,7 @@
 import AboutCard from '../components/AboutCard'
 import { AdminList, IntroBlogs, SuggestedTool } from '../Data/FakeData'
 import Link from 'next/link'
-import AdminCard from '../components/AdminCard'
+import AdminCard from './AdminCard'
 import React, { useEffect, useState } from 'react'
 import { TProfile, TBlog, TSuggestedTool } from '../TypeAlias'
 import Image from 'next/image'

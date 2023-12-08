@@ -49,7 +49,7 @@ const Header = () => {
             alt='avatar-brand'
             width={108}
             height={42}
-            className='pl-2'
+            className='pl-2 cursor-pointer'
           />
         </Link>
         <div className={`flex flex-wrap text-sm font-light ml-4 ${isMenuHidden && 'hidden'}`}>
