@@ -5,13 +5,13 @@ import { AdminList, IntroBlogs, SuggestedTool } from '../Data/FakeData'
 import Link from 'next/link'
 import AdminCard from './AdminCard'
 import React, { useEffect, useState } from 'react'
-import { TProfile, TBlog, TSuggestedTool } from '../TypeAlias'
+import { TProfile, BlogType, TSuggestedTool } from '../TypeAlias'
 import Image from 'next/image'
 import { RiErrorWarningFill } from 'react-icons/ri'
 import { MdModeEdit } from 'react-icons/md'
 
 const AboutPage: React.FC = () => {
-  const [introBlog, setIntroBlog] = useState<TBlog>()
+  const [introBlog, setIntroBlog] = useState<BlogType>()
   const [adminList, setAdminList] = useState<TProfile[]>([])
   const [suggestedTool, setSuggestedTool] = useState<TSuggestedTool>()
 

@@ -1,27 +1,35 @@
-import Image from 'next/image'
 import React from 'react'
-import { TBlog } from '../TypeAlias'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import { BlogType } from '../TypeAlias'
 
-type props = {
-  blog: TBlog
+type PropsType = {
+  blog: BlogType
 }
 
-const BlogCard: React.FC<props> = (props) => {
-  const { blog } = props
+const BlogCard: React.FC<PropsType> = ({ blog }) => {
+  const router = useRouter()
+
+  const onClickBlog = () => {
+    router.push(`/blogs/${blog.id}`)
+  }
+
   return (
     <div className='flex flex-col items-center justify-between mx-auto border border-gray-300 rounded-lg'>
       <div>
-        <div className='h-auto w-full relative'>
+        <div onClick={onClickBlog} className='h-auto w-full relative cursor-pointer'>
           <Image
             src={blog.image}
             alt={blog.title}
-            width='800'
-            height='600'
+            width='400'
+            height='300'
             className='rounded-t-lg'
           />
         </div>
         <div className='flex flex-col gap-4 p-3'>
-          <h1 className='text-2xl font-normal'>{blog.title}</h1>
+          <h1 onClick={onClickBlog} className='text-2xl font-normal cursor-pointer'>
+            {blog.title}
+          </h1>
           <p>{blog.subContent}</p>
           <div className='flex flex-wrap gap-2'>
             {blog.category.map((item, index) => (

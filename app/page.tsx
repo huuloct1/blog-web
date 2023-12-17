@@ -4,14 +4,14 @@ import React, { useEffect, useState } from 'react'
 import AboutCard from './components/AboutCard'
 import BlogCard from './components/BlogCard'
 import TopicRow from './components/TopicRow'
-import { IntroBlogs, NewBlogs, SuggestedBlogs, TopicRows } from './Data/FakeData'
+import { NewBlogs, SuggestedBlogs, TopicRows } from './Data/FakeData'
 import Form from './components/Form'
-import { TBlog, TTopicRow } from './TypeAlias'
+import { BlogType, TTopicRow } from './TypeAlias'
 
 const HomePage: React.FC = () => {
-  const [introBlog, setIntroBlog] = useState<TBlog>()
-  const [suggestedBlogList, setSuggestedBlogList] = useState<TBlog[]>()
-  const [newBlogList, setNewBlogList] = useState<TBlog[]>()
+  const [introBlog, setIntroBlog] = useState<BlogType>()
+  const [suggestedBlogList, setSuggestedBlogList] = useState<BlogType[]>()
+  const [newBlogList, setNewBlogList] = useState<BlogType[]>()
   const [topicRowList, setTopicRowList] = useState<TTopicRow[]>()
 
   useEffect(() => {
@@ -69,3 +69,30 @@ const HomePage: React.FC = () => {
   )
 }
 export default HomePage
+
+export const IntroBlogs: BlogType[] = [
+  {
+    id: 1,
+    title: 'Building a better web, together',
+    category: [''],
+    createdAt: '',
+    author: '',
+    content: '',
+    subContent:
+      'We want to help you build beautiful, accessible, fast, and secure websites that work cross-browser, and for all of your users. This site is our home for content to help you on that journey, written by members of the Chrome team, and external experts.',
+    image: 'https://web.dev/static/images/home.svg',
+    action: 'about dev.web',
+    link: '/about',
+  },
+  {
+    id: 2,
+    title: 'Guidance from Chrome Developer Relations',
+    category: [''],
+    createdAt: '',
+    author: '',
+    content: '',
+    subContent:
+      'We want to help you build beautiful, accessible, fast, and secure websites that work cross-browser, and for all of your users. This site is our home for content to help you on that journey, written by members of the Chrome team, and external experts.',
+    image: 'https://web.dev/static/about/about_1440.png',
+  },
+]

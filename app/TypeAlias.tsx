@@ -1,6 +1,6 @@
 import React from 'react'
 
-export type TBlog = {
+export type BlogType = {
   id: number
   title: string
   category: string[]
@@ -11,6 +11,14 @@ export type TBlog = {
   image: string
   action?: string
   link?: string
+}
+
+export type ArticleType = {
+  id: number
+  title: string
+  outsideContent: string
+  content: string
+  image: string
 }
 
 export type TTopicRow = {

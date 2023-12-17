@@ -1,9 +1,9 @@
-import { TBlog } from '@/app/TypeAlias'
+import { BlogType } from '@/app/TypeAlias'
 import Image from 'next/image'
 import Link from 'next/link'
 
 type props = {
-  blog: TBlog
+  blog: BlogType
   className: string
 }
 

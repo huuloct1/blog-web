@@ -1,6 +1,6 @@
-import { TBlog, TLanguage, TProfile, TSuggestedTool, TTopicRow } from '../TypeAlias'
+import { BlogType, TLanguage, TProfile, TSuggestedTool, TTopicRow } from '../TypeAlias'
 
-export const IntroBlogs: TBlog[] = [
+export const IntroBlogs: BlogType[] = [
   {
     id: 1,
     title: 'Building a better web, together',
@@ -27,7 +27,7 @@ export const IntroBlogs: TBlog[] = [
   },
 ]
 
-export const SuggestedBlogs: TBlog[] = [
+export const SuggestedBlogs: BlogType[] = [
   {
     id: 1,
     title: 'Learn how modern web technology can help you succeed',
@@ -55,7 +55,7 @@ export const SuggestedBlogs: TBlog[] = [
   },
 ]
 
-export const NewBlogs: TBlog[] = [
+export const NewBlogs: BlogType[] = [
   {
     id: 1,
     title: 'Introducing Baseline ',
@@ -311,7 +311,7 @@ export const SuggestedTool: TSuggestedTool = {
   btn: { content: 'Chrome for Developers', link: 'https://developer.chrome.com/' },
 }
 
-export const Blogs: TBlog[] = [
+export const Blogs: BlogType[] = [
   {
     id: 1,
     title: 'New to the web platform in November',
@@ -528,128 +528,5 @@ export const Blogs: TBlog[] = [
     subContent:
       'Passkeys Week is bringing fresh content and highlighting learning materials to help you successfully implement passkeys!',
     image: 'https://web.dev/static/blog/join-us-for-passkeys-week/hero.png',
-  },
-]
-
-export const Articles: TBlog[] = [
-  {
-    id: 1,
-    title: 'Core Web Vitals workflows with Google tools',
-    category: [''],
-    createdAt: '',
-    author: '',
-    content:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    subContent:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    image: 'https://web.dev/static/articles/optimize-cwv-business/image/thumbnail.jpg',
-  },
-  {
-    id: 2,
-    title: 'Core Web Vitals workflows with Google tools',
-    category: [''],
-    createdAt: '',
-    author: '',
-    content:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    subContent:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    image: 'https://web.dev/static/articles/optimize-cwv-business/image/thumbnail.jpg',
-  },
-  {
-    id: 3,
-    title: 'Core Web Vitals workflows with Google tools',
-    category: [''],
-    createdAt: '',
-    author: '',
-    content:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    subContent:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    image: 'https://web.dev/static/articles/optimize-cwv-business/image/thumbnail.jpg',
-  },
-  {
-    id: 4,
-    title: 'Core Web Vitals workflows with Google tools',
-    category: [''],
-    createdAt: '',
-    author: '',
-    content:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    subContent:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    image: 'https://web.dev/static/articles/optimize-cwv-business/image/thumbnail.jpg',
-  },
-  {
-    id: 5,
-    title: 'Core Web Vitals workflows with Google tools',
-    category: [''],
-    createdAt: '',
-    author: '',
-    content:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    subContent:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    image: 'https://web.dev/static/articles/optimize-cwv-business/image/thumbnail.jpg',
-  },
-  {
-    id: 6,
-    title: 'Core Web Vitals workflows with Google tools',
-    category: [''],
-    createdAt: '',
-    author: '',
-    content:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    subContent:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    image: 'https://web.dev/static/articles/optimize-cwv-business/image/thumbnail.jpg',
-  },
-  {
-    id: 7,
-    title: 'Core Web Vitals workflows with Google tools',
-    category: [''],
-    createdAt: '',
-    author: '',
-    content:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    subContent:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    image: 'https://web.dev/static/articles/optimize-cwv-business/image/thumbnail.jpg',
-  },
-  {
-    id: 8,
-    title: 'Core Web Vitals workflows with Google tools',
-    category: [''],
-    createdAt: '',
-    author: '',
-    content:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    subContent:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    image: 'https://web.dev/static/articles/optimize-cwv-business/image/thumbnail.jpg',
-  },
-  {
-    id: 9,
-    title: 'Core Web Vitals workflows with Google tools',
-    category: [''],
-    createdAt: '',
-    author: '',
-    content:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    subContent:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    image: 'https://web.dev/static/articles/optimize-cwv-business/image/thumbnail.jpg',
-  },
-  {
-    id: 10,
-    title: 'Core Web Vitals workflows with Google tools',
-    category: [''],
-    createdAt: '',
-    author: '',
-    content:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    subContent:
-      'With the growing importance of Core Web Vitals, site owners and developers increasingly focus on performance and key user experiences. Google provides many tools to help evaluate, optimize, and monitor pages, but users are often',
-    image: 'https://web.dev/static/articles/optimize-cwv-business/image/thumbnail.jpg',
   },
 ]
