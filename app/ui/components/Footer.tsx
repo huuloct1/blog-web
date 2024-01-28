@@ -1,10 +1,9 @@
 'use client'
 
+import constants from '@/lib/constants'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Languages } from '../Data/FakeData'
 import { useState } from 'react'
-import { FaCaretUp } from 'react-icons/fa6'
 
 const Footer = () => {
   const [selectedOption, setSelectedOption] = useState('')
@@ -35,39 +34,24 @@ const Footer = () => {
         </div>
 
         {/* container */}
-        <div className='flex flex-col gap-y-2 lg:w-1/6'>
-          <h3 className='font-medium'>Contribute</h3>
-          <Link href={'#'} className='w-fit hover:text-blue-600 hover:underline'>
-            File a bug
-          </Link>
-          <Link href={'#'} className='w-fit hover:text-blue-600 hover:underline'>
-            See open issues
-          </Link>
-        </div>
-        <div className='flex flex-col gap-y-2 lg:w-1/6'>
-          <h3 className='font-medium'>Related Content</h3>
-          <Link href={'#'} className='w-fit hover:text-blue-600 hover:underline'>
-            Chrome for Developers
-          </Link>
-          <Link href={'#'} className='w-fit hover:text-blue-600 hover:underline'>
-            Chromium updates
-          </Link>
-          <Link href={'#'} className='w-fit hover:text-blue-600 hover:underline'>
-            Case studies
-          </Link>
-          <Link href={'#'} className='w-fit hover:text-blue-600 hover:underline'>
-            Podcasts & shows
-          </Link>
-        </div>
-        <div className='flex flex-col gap-y-2 lg:w-1/6'>
-          <h3 className='font-medium'>Contribute</h3>
-          <Link href={'#'} className='w-fit hover:text-blue-600 hover:underline'>
-            @ChromiumDev on X
-          </Link>
-          <Link href={'#'} className='w-fit hover:text-blue-600 hover:underline'>
-            YouTube
-          </Link>
-        </div>
+        {constants.navFooter.map((item) => {
+          return (
+            <div key={item.title} className='flex flex-col gap-y-2 lg:w-1/6'>
+              <h3 className='font-semibold'>{item.title}</h3>
+              {item.list.map((item) => {
+                return (
+                  <Link
+                    key={item.to}
+                    href={item.to}
+                    className='w-fit hover:text-blue-600 hover:underline'
+                  >
+                    {item.text}
+                  </Link>
+                )
+              })}
+            </div>
+          )
+        })}
       </div>
 
       {/* footer */}
@@ -88,7 +72,7 @@ const Footer = () => {
             onChange={handleDropdownChange}
             className='text-xs p-2 bg-white border'
           >
-            {Languages.map((item) => {
+            {constants.languages.map((item) => {
               return (
                 <option key={item.code} value={item.code}>
                   {item.name}

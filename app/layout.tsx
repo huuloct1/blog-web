@@ -2,11 +2,11 @@ import React from 'react'
 import './globals.css'
 import { roboto } from '@/app/ui/fonts'
 
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './ui/components/Header'
+import Footer from './ui/components/Footer'
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'MyDev',
 }
 

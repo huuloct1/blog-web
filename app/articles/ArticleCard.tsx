@@ -1,13 +1,20 @@
 import Image from 'next/image'
 import React from 'react'
-import { ArticleType } from '../TypeAlias'
 import { useRouter } from 'next/navigation'
+
+export type ArticleType = {
+  id: number
+  title: string
+  outsideContent: string
+  content: string
+  image: string
+}
 
 type props = {
   article: ArticleType
 }
 
-const ArticlesCard: React.FC<props> = ({ article }) => {
+const ArticleCard: React.FC<props> = ({ article }) => {
   const router = useRouter()
 
   const onClickArticle = () => {
@@ -35,4 +42,4 @@ const ArticlesCard: React.FC<props> = ({ article }) => {
     </div>
   )
 }
-export default ArticlesCard
+export default ArticleCard

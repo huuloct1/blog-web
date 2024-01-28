@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Languages } from '@/app/Data/FakeData'
+import constants from '@/lib/constants'
 
 const Form = () => {
   const [selectedOption, setSelectedOption] = useState('')
@@ -46,7 +46,7 @@ const Form = () => {
           onChange={handleDropdownChange}
           className='text-xs p-2 bg-white border'
         >
-          {Languages.map((item) => {
+          {constants.languages.map((item) => {
             return (
               <option key={item.code} value={item.code}>
                 {item.name}

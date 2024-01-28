@@ -32,7 +32,7 @@ const BlogCard: React.FC<PropsType> = ({ blog }) => {
           </h1>
           <p>{blog.subContent}</p>
           <div className='flex flex-wrap gap-2'>
-            {blog.category.map((item, index) => (
+            {blog.category?.map((item, index) => (
               <span
                 key={index}
                 className='w-fit py-1 px-2 text-sm font-normal bg-gray-100 rounded-md'

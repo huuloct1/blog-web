@@ -1,14 +1,14 @@
 'use client'
 
-import AboutCard from '../components/AboutCard'
-import { AdminList, IntroBlogs, SuggestedTool } from '../Data/FakeData'
+import AboutCard from '../ui/components/IntroCard'
 import Link from 'next/link'
-import AdminCard from './AdminCard'
+import AdminCard from '../ui/about/AdminCard'
 import React, { useEffect, useState } from 'react'
-import { TProfile, BlogType, TSuggestedTool } from '../TypeAlias'
+import { BlogType, TProfile, TSuggestedTool } from '../TypeAlias'
 import Image from 'next/image'
 import { RiErrorWarningFill } from 'react-icons/ri'
 import { MdModeEdit } from 'react-icons/md'
+import { IntroBlogs } from '../page'
 
 const AboutPage: React.FC = () => {
   const [introBlog, setIntroBlog] = useState<BlogType>()
@@ -27,7 +27,7 @@ const AboutPage: React.FC = () => {
       {/* About brand header */}
       {introBlog && (
         <div className='p-6'>
-          <AboutCard blog={introBlog} />
+          <AboutCard />
         </div>
       )}
 
@@ -37,8 +37,8 @@ const AboutPage: React.FC = () => {
         <p>
           Explore our archive of content, covering subjects across the web development stack. Find
           the latest news and content on our{' '}
-          <Link href={'/blog'} className='link'>
-            blog
+          <Link href={'/blogs'} className='link'>
+            blogs
           </Link>
           , see the latest{' '}
           <Link href={'/articles'} className='link'>
@@ -151,3 +151,43 @@ const AboutPage: React.FC = () => {
   )
 }
 export default AboutPage
+
+const AdminList: TProfile[] = [
+  {
+    id: 1,
+    name: 'Paul Kinlan',
+    image: 'https://web.dev/static/image/authors/paulkinlan_720.jpeg',
+    position: 'DevRel Lead',
+    link: 'https://paul.kinlan.me/',
+  },
+  {
+    id: 2,
+    name: 'Philip Walton',
+    image: 'https://web.dev/static/image/authors/philipwalton_720.jpg',
+    position: 'DevRel Experiences Lead',
+    link: '',
+  },
+  {
+    id: 3,
+    name: 'Ali Spivak',
+    image: 'https://web.dev/static/image/authors/alispivak_720.png',
+    position: 'DevRel Platforms Lead',
+    link: '',
+  },
+  {
+    id: 4,
+    name: 'Rachel Andrew',
+    image: 'https://web.dev/static/image/authors/rachelandrew_720.jpg',
+    position: 'DevRel Content Lead',
+    link: 'https://rachelandrew.co.uk/',
+  },
+]
+
+const SuggestedTool: TSuggestedTool = {
+  id: 1,
+  image: 'https://web.dev/static/image/dcc_new.svg',
+  title: 'Making the web better for tomorrow',
+  content:
+    'We hope web.dev helps you to create high quality web experiences today. The Chrome team is also working to make the web better tomorrow. If you want to learn more about what we are doing, and offer feedback on the features we are developing and contributing to, check out Chrome for Developers.',
+  btn: { content: 'Chrome for Developers', link: 'https://developer.chrome.com/' },
+}

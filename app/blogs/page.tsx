@@ -2,11 +2,11 @@
 
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { BlogType } from '../TypeAlias'
+import { BlogType } from './BlogCard'
 import BlogCard from './BlogCard'
 import { FaCaretUp } from 'react-icons/fa6'
 // import { fetchBlogList } from '../lib/data'
-import PageTitle, { PageTitleType } from '../components/PageTitle'
+import PageTitle, { PageTitleType } from '../ui/components/PageTitle'
 
 const BlogsPage: React.FC = () => {
   const [blogList, setBlogList] = useState<BlogType[]>()
@@ -280,5 +280,168 @@ export const Blogs: BlogType[] = [
     subContent:
       'Passkeys Week is bringing fresh content and highlighting learning materials to help you successfully implement passkeys!',
     image: 'https://web.dev/static/blog/join-us-for-passkeys-week/hero.png',
+  },
+]
+
+const blogs = [
+  {
+    id: 1,
+    title: 'The Future of Artificial Intelligence',
+    author: 'John Doe',
+    createdAt: '2022-01-15T08:00:00Z',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
+    tags: ['AI', 'Technology'],
+  },
+  {
+    id: 2,
+    title: 'Web Development Trends in 2022',
+    author: 'Jane Smith',
+    createdAt: '2022-02-05T10:30:00Z',
+    content: 'Nulla facilisi. Ut fringilla orci vel justo...',
+    tags: ['Web Development', 'Trends'],
+  },
+  {
+    id: 3,
+    title: 'The Impact of Cryptocurrencies on Finance',
+    author: 'Alice Johnson',
+    createdAt: '2022-03-10T12:15:00Z',
+    content: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem...',
+    tags: ['Cryptocurrency', 'Finance'],
+  },
+  {
+    id: 4,
+    title: 'Exploring the World of Quantum Computing',
+    author: 'Bob Williams',
+    createdAt: '2022-04-05T09:45:00Z',
+    content: 'Quisque sit amet justo eu justo feugiat eleifend...',
+    tags: ['Quantum Computing', 'Technology'],
+  },
+  {
+    id: 5,
+    title: 'The Art of Design Thinking in Product Development',
+    author: 'Eva Davis',
+    createdAt: '2022-05-20T14:30:00Z',
+    content: 'In hac habitasse platea dictumst. Suspendisse potenti...',
+    tags: ['Design Thinking', 'Product Development'],
+  },
+  {
+    id: 6,
+    title: 'The Evolution of Mobile Technology',
+    author: 'Sophie Miller',
+    createdAt: '2022-06-15T11:10:00Z',
+    content: 'Fusce sit amet sapien eget dui hendrerit vehicula...',
+    tags: ['Mobile Technology', 'Innovation'],
+  },
+  {
+    id: 7,
+    title: 'Understanding Machine Learning Algorithms',
+    author: 'Daniel Brown',
+    createdAt: '2022-07-02T08:45:00Z',
+    content: 'Vestibulum quis feugiat felis. Aliquam vel efficitur metus...',
+    tags: ['Machine Learning', 'Algorithms'],
+  },
+  {
+    id: 8,
+    title: 'The Impact of Social Media on Society',
+    author: 'Mia Johnson',
+    createdAt: '2022-08-18T14:20:00Z',
+    content: 'Duis eget tellus a libero pellentesque sagittis...',
+    tags: ['Social Media', 'Society'],
+  },
+  {
+    id: 9,
+    title: 'Advancements in Renewable Energy Technologies',
+    author: 'David Robinson',
+    createdAt: '2022-09-05T13:30:00Z',
+    content: 'Praesent auctor luctus sem, id lobortis quam pharetra eu...',
+    tags: ['Renewable Energy', 'Technology'],
+  },
+  {
+    id: 10,
+    title: 'The Future of Space Exploration',
+    author: 'Emma Wilson',
+    createdAt: '2022-10-22T10:15:00Z',
+    content: 'Nullam nec venenatis nisl. Suspendisse potenti...',
+    tags: ['Space Exploration', 'Science'],
+  },
+  {
+    id: 11,
+    title: 'The Revolution of Artificial Neural Networks',
+    author: 'Sophia Turner',
+    createdAt: '2022-12-08T09:00:00Z',
+    content: 'Curabitur luctus ligula ac ligula viverra, ac suscipit tortor aliquet...',
+    tags: ['Artificial Neural Networks', 'Machine Learning'],
+  },
+  {
+    id: 12,
+    title: 'Emerging Trends in Augmented Reality',
+    author: 'Oliver Davis',
+    createdAt: '2023-01-05T14:30:00Z',
+    content: 'Sed auctor ligula vel justo interdum, vel facilisis mi commodo...',
+    tags: ['Augmented Reality', 'Technology'],
+  },
+  {
+    id: 13,
+    title: 'Challenges and Opportunities in Cybersecurity',
+    author: 'Isabella Wright',
+    createdAt: '2023-02-20T11:45:00Z',
+    content: 'Vivamus ut lacus a libero tincidunt accumsan a non ligula...',
+    tags: ['Cybersecurity', 'Security'],
+  },
+  {
+    id: 14,
+    title: 'The Future of Biotechnology',
+    author: 'Benjamin Harris',
+    createdAt: '2023-03-10T08:15:00Z',
+    content: 'Quisque ut lacus quis elit tincidunt cursus. Nam ac nisl...',
+    tags: ['Biotechnology', 'Science'],
+  },
+  {
+    id: 15,
+    title: 'Innovations in Quantum Cryptography',
+    author: 'Evelyn Rodriguez',
+    createdAt: '2023-04-02T16:20:00Z',
+    content: 'Fusce at sapien non risus rhoncus eleifend at ac dui...',
+    tags: ['Quantum Cryptography', 'Security'],
+  },
+  {
+    id: 16,
+    title: 'The Impact of Blockchain on Finance',
+    author: 'William Baker',
+    createdAt: '2023-05-18T13:10:00Z',
+    content: 'Pellentesque eu urna non lectus egestas vestibulum at id libero...',
+    tags: ['Blockchain', 'Finance'],
+  },
+  {
+    id: 17,
+    title: 'The Role of Data Analytics in Business Growth',
+    author: 'Ava Martinez',
+    createdAt: '2023-06-05T10:30:00Z',
+    content: 'Vivamus auctor ante vitae suscipit euismod. Nulla tincidunt purus...',
+    tags: ['Data Analytics', 'Business'],
+  },
+  {
+    id: 18,
+    title: 'The Impact of 5G Technology on Communication',
+    author: 'Michael Thompson',
+    createdAt: '2022-11-20T16:40:00Z',
+    content: 'Pellentesque vel risus quis sem volutpat sagittis...',
+    tags: ['5G Technology', 'Communication'],
+  },
+  {
+    id: 19,
+    title: 'The Rise of E-commerce in the Digital Age',
+    author: 'Samuel White',
+    createdAt: '2022-12-01T17:20:00Z',
+    content: 'Integer id vehicula eros. Sed rhoncus metus nec nulla sodales...',
+    tags: ['E-commerce', 'Digital'],
+  },
+  {
+    id: 20,
+    title: 'The Impact of Virtual Reality on Education',
+    author: 'Alex Johnson',
+    createdAt: '2022-03-20T15:45:00Z',
+    content: 'Pellentesque habitant morbi tristique senectus et netus...',
+    tags: ['Virtual Reality', 'Education'],
   },
 ]

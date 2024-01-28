@@ -1,11 +1,10 @@
 'use client'
 
 import React, { MouseEvent, useCallback, useEffect, useState } from 'react'
-import { ArticleType } from '../TypeAlias'
-import ArticlesCard from './ArticlesCard'
-import { FaCaretUp } from 'react-icons/fa6'
+import ArticlesCard from './ArticleCard'
 import PageList from './PageList'
-import PageTitle, { PageTitleType } from '../components/PageTitle'
+import PageTitle, { PageTitleType } from '../ui/components/PageTitle'
+import { ArticleType } from './ArticleCard'
 
 const ArticlesPage: React.FC = () => {
   const [articleList, setArticleList] = useState<ArticleType[]>()
@@ -39,11 +38,6 @@ const ArticlesPage: React.FC = () => {
 
   return (
     <div>
-      {/* Intro header */}
-      <div className='p-6 text-xl text-white bgColorPrimary'>
-        <span>Articles</span>
-      </div>
-
       {/* title */}
       <PageTitle pageTitle={ArticlesTitle} />
 

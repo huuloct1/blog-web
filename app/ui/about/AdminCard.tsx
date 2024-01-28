@@ -1,14 +1,13 @@
+import { TProfile } from '@/app/TypeAlias'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { TProfile } from '../TypeAlias'
 
 type props = {
   admin: TProfile
 }
 
-const AdminCard: React.FC<props> = (props) => {
-  const { admin } = props
+const AdminCard: React.FC<props> = ({ admin }) => {
   return (
     <div className='w-full flex flex-col gap-4 items-center p-6 border border-gray-300 rounded-lg'>
       <Image src={admin.image} alt={admin.name} width={180} height={180} className='rounded-full' />

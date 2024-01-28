@@ -1,9 +1,21 @@
-import { TTopicRow } from '@/app/TypeAlias'
 import Link from 'next/link'
+
+export type TTopicRow = {
+  id: number
+  title: string
+  subTitle: string
+  description: string
+  btnLink?: string
+  itemList: {
+    id: number
+    title: string
+    description: string
+  }[]
+}
 
 type props = {
   topicRow: TTopicRow
-  className: string
+  className?: string
 }
 
 const TopicRow = (props: props) => {

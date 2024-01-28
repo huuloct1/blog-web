@@ -1,5 +1,5 @@
 import { sql } from '@vercel/postgres'
-import { BlogType } from '../TypeAlias'
+import { BlogType } from '../app/TypeAlias'
 
 export async function fetchBlogList() {
   try {
